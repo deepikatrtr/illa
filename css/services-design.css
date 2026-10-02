@@ -1,0 +1,640 @@
+/* ==========================================================================
+   ILAA INDIA - SERVICES PAGE EDITORIAL STYLESHEET
+   1:1 Match to Stillpoint Therapy Reference Design
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Bellefair&family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --svc-bg-canvas: #FAF8F5;
+  --svc-bg-cream: #F5F2EC;
+  --svc-bg-sage: linear-gradient(155deg, #7c8b77 0%, #687663 50%, #4f5a4a 100%);
+  --svc-bg-sage-solid: #6E7C69;
+  --svc-bg-sage-dark: #5F6D5A;
+  --svc-bg-terracotta: #9B533D;
+  --svc-bg-nude: #E4DACD;
+  --svc-bg-nude-hover: #D7CBB9;
+  --svc-text-dark: #1E2321;
+  --svc-text-muted: #5A6358;
+  --svc-text-subtle: #7A8478;
+  --svc-font-display: 'Bellefair', 'Playfair Display', 'Italiana', Georgia, serif;
+  --svc-font-serif: 'Playfair Display', 'Bellefair', Georgia, serif;
+  --svc-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.services-page-body {
+  background-color: var(--svc-bg-canvas);
+  color: var(--svc-text-dark);
+  font-family: var(--svc-font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.services-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  width: 100%;
+}
+
+.services-container-wide {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  width: 100%;
+}
+
+/* ==========================================================================
+   1. TOP ANNOUNCEMENT BAR & HEADER
+   ========================================================================== */
+.services-top-announcement {
+  background-color: #64725F;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  font-family: var(--svc-font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1rem;
+}
+
+.services-nav-bar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services-nav-logo {
+  font-family: var(--svc-font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--svc-text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.services-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.services-nav-links a {
+  font-family: var(--svc-font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #4A524A;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.services-nav-links a:hover,
+.services-nav-links a.active {
+  color: var(--svc-bg-terracotta);
+}
+
+.services-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.services-nav-contact-link {
+  font-family: var(--svc-font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--svc-text-dark);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   2. STILLPOINT HERO SPLIT (Terracotta Portrait + Arched Services Title Card)
+   ========================================================================== */
+.services-stillpoint-hero {
+  background-color: #FFFFFF;
+  padding: 3rem 0 4.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero-split-grid {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+}
+
+/* Left: Terracotta Arch Background with Serene Portrait */
+.services-hero-portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  height: clamp(400px, 50vh, 520px);
+  border-radius: 240px 240px 0 0;
+  background-color: var(--svc-bg-terracotta);
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 16px 40px rgba(155, 83, 61, 0.2);
+}
+
+.services-hero-portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* Right: Arched Card with "Our Therapy & Counselling Services" */
+.services-hero-title-card {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 40px;
+  padding: clamp(3rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3.5rem);
+  max-width: 500px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.03);
+}
+
+.services-hero-title-card::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 140px;
+  height: 140px;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top-left-radius: 50px;
+  pointer-events: none;
+}
+
+.services-hero-heading {
+  font-family: var(--svc-font-display);
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--svc-text-dark);
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.01em;
+}
+
+.btn-services-nude-pill {
+  background-color: var(--svc-bg-nude);
+  color: var(--svc-text-dark);
+  font-family: var(--svc-font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.btn-services-nude-pill:hover {
+  background-color: var(--svc-bg-nude-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+/* ==========================================================================
+   3. CURVING ORGANIC DOME SECTION ("BUILDING A BETTER FUTURE TOGETHER")
+   ========================================================================== */
+.services-curved-flow-section {
+  position: relative;
+  background: linear-gradient(155deg, #7c8b77 0%, #687663 50%, #4f5a4a 100%);
+  padding: 0 0 6rem 0;
+}
+
+/* Curving convex arch dome at top */
+.services-curve-top-wrapper {
+  position: relative;
+  background-color: #FFFFFF;
+  border-bottom-left-radius: clamp(100px, 15vw, 240px);
+  border-bottom-right-radius: clamp(100px, 15vw, 240px);
+  padding: 4.5rem 1.75rem 6rem 1.75rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.services-curve-content {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-curve-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.services-curve-tag {
+  font-family: var(--svc-font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--svc-text-subtle);
+}
+
+.services-curve-title {
+  font-family: var(--svc-font-display);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--svc-text-dark);
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+}
+
+.services-curve-desc {
+  font-family: var(--svc-font-sans);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--svc-text-muted);
+  max-width: 660px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   4. THREE ARCHED SERVICE CARDS (Tombstone Arch on Olive Sage)
+   ========================================================================== */
+.services-arched-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: 1rem;
+}
+
+.services-tombstone-card {
+  background-color: #FFFFFF;
+  border-radius: 140px 140px 8px 8px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.services-tombstone-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+.services-card-arch-media {
+  width: 100%;
+  height: 280px;
+  border-radius: 140px 140px 0 0;
+  overflow: hidden;
+  background-color: #ECE7DF;
+}
+
+.services-card-arch-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.services-tombstone-card:hover .services-card-arch-media img {
+  transform: scale(1.06);
+}
+
+.services-card-body {
+  padding: 2rem 1.75rem 2rem 1.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.services-card-name {
+  font-family: var(--svc-font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--svc-text-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.services-card-meta {
+  font-family: var(--svc-font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--svc-bg-terracotta);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.services-card-text {
+  font-family: var(--svc-font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: #666666;
+  margin: 0 0 1.75rem 0;
+  flex-grow: 1;
+}
+
+.btn-services-card-book {
+  background-color: var(--svc-bg-nude);
+  color: var(--svc-text-dark);
+  font-family: var(--svc-font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.25s ease;
+}
+
+.btn-services-card-book:hover {
+  background-color: var(--svc-bg-nude-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. TRANSPARENT PRICING SECTION (Clean Minimalist Cards Grid)
+   ========================================================================== */
+.services-pricing-strip-section {
+  padding: clamp(5rem, 7vw, 7.5rem) 0;
+  background-color: var(--svc-bg-canvas);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.services-pricing-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto clamp(2.5rem, 4vw, 4rem) auto;
+}
+
+.services-pricing-title {
+  font-family: var(--svc-font-display);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--svc-text-dark);
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+}
+
+.services-pricing-sub {
+  font-family: var(--svc-font-sans);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--svc-text-muted);
+  margin: 0;
+}
+
+.services-pricing-grid-clean {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.services-price-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 2.2rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.services-price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.services-price-card.featured-card {
+  border-color: var(--svc-bg-terracotta);
+  background-color: #FAF6F4;
+}
+
+.services-price-pill {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background-color: var(--svc-bg-terracotta);
+  color: #FFFFFF;
+  font-family: var(--svc-font-sans);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+}
+
+.services-price-dur {
+  font-family: var(--svc-font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--svc-text-subtle);
+  margin-bottom: 0.4rem;
+}
+
+.services-price-num {
+  font-family: var(--svc-font-display);
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--svc-text-dark);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.services-price-tax {
+  font-family: var(--svc-font-sans);
+  font-size: 0.72rem;
+  color: var(--svc-text-subtle);
+  margin-bottom: 1.25rem;
+}
+
+.services-price-desc {
+  font-family: var(--svc-font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: #555555;
+  margin-bottom: 1.75rem;
+}
+
+.btn-price-book {
+  background-color: var(--svc-text-dark);
+  color: #FFFFFF;
+  font-family: var(--svc-font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.btn-price-book:hover {
+  background-color: var(--svc-bg-terracotta);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. TESTIMONIAL CARD SECTION (Card Type)
+   ========================================================================== */
+.services-testimonial-section {
+  padding: clamp(4.5rem, 7vw, 7rem) 1.5rem;
+  background-color: var(--svc-bg-canvas);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.services-testimonial-card-box {
+  max-width: 860px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #4a5360 0%, #363d47 48%, #252a32 100%);
+  border-radius: 24px;
+  padding: clamp(3rem, 5vw, 4.5rem) clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #FFFFFF;
+}
+
+.services-testimonial-card-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.3);
+}
+
+.services-testi-stars {
+  color: #E5C378;
+  font-size: 1.15rem;
+  letter-spacing: 5px;
+  margin-bottom: 1.75rem;
+}
+
+.services-testi-quote {
+  font-family: var(--svc-font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.95);
+  font-style: normal;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.01em;
+}
+
+.services-testi-brand-tag {
+  font-family: var(--svc-font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==========================================================================
+   7. RESPONSIVE BREAKPOINTS (ALL DEVICES)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .services-hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .services-hero-title-card {
+    max-width: 100%;
+  }
+  .services-arched-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-pricing-grid-clean {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-nav-bar {
+    padding: 1rem 1.25rem;
+  }
+  .services-nav-links {
+    display: none;
+  }
+  .services-curve-top-wrapper {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 2.5rem 1.25rem 3.5rem 1.25rem;
+  }
+  .services-curve-meta-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .services-arched-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-pricing-grid-clean {
+    grid-template-columns: 1fr;
+  }
+  .treatment-filter-tabs {
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  .treatment-filter-btn {
+    white-space: nowrap;
+  }
+  .services-testimonial-card-box {
+    padding: 2.5rem 1.5rem;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-curve-top-wrapper {
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    padding: 2rem 1rem 3rem 1rem;
+  }
+  .services-hero-display-title {
+    font-size: 2.2rem;
+  }
+  .services-tombstone-card {
+    border-radius: 120px 120px 14px 14px;
+    min-height: 400px;
+  }
+  .services-price-card {
+    padding: 1.75rem 1.25rem;
+  }
+}
+

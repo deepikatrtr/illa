@@ -1,0 +1,305 @@
+/* ==========================================================================
+   ILAA INDIA - MULTI-DIRECTIONAL 3D SCROLL-TRIGGERED REVEAL ANIMATIONS
+   Silky 60fps/120fps hardware-accelerated transforms (Left, Right, Top, Bottom, Zoom)
+   ========================================================================== */
+
+/* 1. Global 3D Perspective Context */
+html, body {
+  perspective: 1200px;
+}
+
+/* Perspective wrappers across all key sections */
+.hero-wrapper,
+.section-orbital-exact,
+.section-basis-split,
+.section-services-exact,
+.section-why-choose-reflexology,
+.section-master-cta,
+.section-how-it-works-arch,
+.section-testimonials-clean,
+.featured-in-section,
+.about-viera-hero,
+.about-slate-editorial-section,
+.about-reviews-feature-section,
+.about-fashion-gallery-section,
+.services-menu-section,
+.services-pricing-section,
+.services-passes-section,
+.gallery-main-container,
+.touch-contact-section,
+.contact-sanctuary-details-section,
+.contact-map-embed-section {
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+/* ==========================================================================
+   2. DIRECTIONAL SCROLL REVEALS (Left, Right, Top, Bottom, Zoom)
+   ========================================================================== */
+
+/* Base Transition for All Reveal Elements */
+.reveal-left,
+.reveal-right,
+.reveal-top,
+.reveal-bottom,
+.reveal-zoom,
+.reveal-3d,
+.reveal-3d-fade-up,
+[data-reveal] {
+  opacity: 0 !important;
+  will-change: opacity, transform !important;
+  transform-style: preserve-3d !important;
+  transition: opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1), transform 1.05s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* A. SLIDE & FADE FROM LEFT */
+.reveal-left,
+[data-reveal="left"] {
+  transform: translateX(-80px) rotateY(-8deg) translateZ(-20px) !important;
+}
+
+.reveal-left.is-revealed,
+[data-reveal="left"].is-revealed {
+  opacity: 1 !important;
+  transform: translateX(0) rotateY(0deg) translateZ(0) !important;
+}
+
+/* B. SLIDE & FADE FROM RIGHT */
+.reveal-right,
+[data-reveal="right"] {
+  transform: translateX(80px) rotateY(8deg) translateZ(-20px) !important;
+}
+
+.reveal-right.is-revealed,
+[data-reveal="right"].is-revealed {
+  opacity: 1 !important;
+  transform: translateX(0) rotateY(0deg) translateZ(0) !important;
+}
+
+/* C. SLIDE & FADE FROM TOP */
+.reveal-top,
+[data-reveal="top"] {
+  transform: translateY(-60px) rotateX(-10deg) translateZ(-20px) !important;
+}
+
+.reveal-top.is-revealed,
+[data-reveal="top"].is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) rotateX(0deg) translateZ(0) !important;
+}
+
+/* D. SLIDE & FADE FROM BOTTOM */
+.reveal-bottom,
+.reveal-3d,
+.reveal-3d-fade-up,
+[data-reveal="bottom"] {
+  transform: translateY(65px) rotateX(14deg) translateZ(-30px) !important;
+}
+
+.reveal-bottom.is-revealed,
+.reveal-3d.is-revealed,
+.reveal-3d-fade-up.is-revealed,
+[data-reveal="bottom"].is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) rotateX(0deg) translateZ(0) !important;
+}
+
+/* E. ZOOM & 3D SCALE IN FROM CENTER */
+.reveal-zoom,
+[data-reveal="zoom"] {
+  transform: scale(0.85) translateZ(-60px) !important;
+}
+
+.reveal-zoom.is-revealed,
+[data-reveal="zoom"].is-revealed {
+  opacity: 1 !important;
+  transform: scale(1) translateZ(0) !important;
+}
+
+/* ==========================================================================
+   3. STAGGERED MULTI-DIRECTIONAL GROUP REVEALS
+   ========================================================================== */
+
+/* Staggered Children from Bottom */
+.reveal-3d-stagger > *,
+.reveal-stagger-bottom > * {
+  opacity: 0 !important;
+  transform: translateY(55px) scale(0.95) translateZ(-25px) !important;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.95s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: opacity, transform !important;
+}
+
+.reveal-3d-stagger.is-revealed > *:nth-child(1),
+.reveal-stagger-bottom.is-revealed > *:nth-child(1) { transition-delay: 0.05s !important; opacity: 1 !important; transform: none !important; }
+.reveal-3d-stagger.is-revealed > *:nth-child(2),
+.reveal-stagger-bottom.is-revealed > *:nth-child(2) { transition-delay: 0.15s !important; opacity: 1 !important; transform: none !important; }
+.reveal-3d-stagger.is-revealed > *:nth-child(3),
+.reveal-stagger-bottom.is-revealed > *:nth-child(3) { transition-delay: 0.25s !important; opacity: 1 !important; transform: none !important; }
+.reveal-3d-stagger.is-revealed > *:nth-child(4),
+.reveal-stagger-bottom.is-revealed > *:nth-child(4) { transition-delay: 0.35s !important; opacity: 1 !important; transform: none !important; }
+.reveal-3d-stagger.is-revealed > *:nth-child(5),
+.reveal-stagger-bottom.is-revealed > *:nth-child(5) { transition-delay: 0.45s !important; opacity: 1 !important; transform: none !important; }
+.reveal-3d-stagger.is-revealed > *:nth-child(6),
+.reveal-stagger-bottom.is-revealed > *:nth-child(6) { transition-delay: 0.55s !important; opacity: 1 !important; transform: none !important; }
+
+/* Staggered Children from Left */
+.reveal-stagger-left > * {
+  opacity: 0 !important;
+  transform: translateX(-60px) rotateY(-6deg) !important;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.95s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.reveal-stagger-left.is-revealed > *:nth-child(1) { transition-delay: 0.06s !important; opacity: 1 !important; transform: none !important; }
+.reveal-stagger-left.is-revealed > *:nth-child(2) { transition-delay: 0.18s !important; opacity: 1 !important; transform: none !important; }
+.reveal-stagger-left.is-revealed > *:nth-child(3) { transition-delay: 0.30s !important; opacity: 1 !important; transform: none !important; }
+
+/* Staggered Children from Right */
+.reveal-stagger-right > * {
+  opacity: 0 !important;
+  transform: translateX(60px) rotateY(6deg) !important;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.95s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.reveal-stagger-right.is-revealed > *:nth-child(1) { transition-delay: 0.06s !important; opacity: 1 !important; transform: none !important; }
+.reveal-stagger-right.is-revealed > *:nth-child(2) { transition-delay: 0.18s !important; opacity: 1 !important; transform: none !important; }
+.reveal-stagger-right.is-revealed > *:nth-child(3) { transition-delay: 0.30s !important; opacity: 1 !important; transform: none !important; }
+
+/* Delay Modifiers */
+.delay-100 { transition-delay: 0.1s !important; }
+.delay-200 { transition-delay: 0.2s !important; }
+.delay-300 { transition-delay: 0.3s !important; }
+.delay-400 { transition-delay: 0.4s !important; }
+.delay-500 { transition-delay: 0.5s !important; }
+
+/* ==========================================================================
+   4. 3D KINETIC TYPOGRAPHY TRACK
+   ========================================================================== */
+.kinetic-3d-floating-text {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(2rem, 4vw, 3.2rem) 0;
+  pointer-events: none;
+  z-index: 5;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  background: transparent;
+}
+
+.kinetic-3d-track {
+  display: flex;
+  white-space: nowrap;
+  font-family: var(--font-editorial, 'Cormorant Garamond', serif);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  text-transform: uppercase;
+  color: rgba(45, 90, 52, 0.13);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transform: rotateX(8deg) rotateY(-4deg) translateZ(10px);
+  transition: transform 0.2s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+.kinetic-3d-word {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0 2rem;
+  font-weight: 300;
+}
+
+.kinetic-3d-word span {
+  font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.1rem;
+  opacity: 0.7;
+  color: #52B788;
+}
+
+/* ==========================================================================
+   5. 3D PARALLAX IMAGE DEPTH & FLOATING LAYERS
+   ========================================================================== */
+.hero-bg-img img,
+.about-viera-hero-bg img {
+  will-change: transform;
+  transform: scale(1.04) translateZ(0);
+  transition: transform 0.2s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+.orbital-satellite {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.orbital-satellite:hover {
+  transform: scale(1.1) translateZ(35px) rotateZ(3deg) !important;
+  box-shadow: 0 20px 45px rgba(45, 90, 52, 0.35);
+}
+
+.why-center-image-wrap {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* ==========================================================================
+   6. 3D INTERACTIVE TILT ON CARDS & ITEMS
+   ========================================================================== */
+.service-strip-box,
+.basis-pillar-card,
+.about-slate-tall-card,
+.treatment-card-item,
+.gallery-masonry-item,
+.how-arch-step-col,
+.tilt-3d-card {
+  transform-style: preserve-3d;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  will-change: transform;
+}
+
+.service-strip-bg-img img,
+.gallery-masonry-item img,
+.about-slate-tall-card img,
+.treatment-card-media img {
+  transform: scale(1) translateZ(0);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* 7. 3D Typography Depth */
+.hero-main-title,
+.about-viera-hero-title {
+  transform-style: preserve-3d;
+  transform: translateZ(40px);
+  will-change: transform;
+}
+
+.hero-side-paragraph,
+.about-viera-hero-subtitle {
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
+  will-change: transform;
+}
+
+/* 8. Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-left,
+  .reveal-right,
+  .reveal-top,
+  .reveal-bottom,
+  .reveal-zoom,
+  .reveal-3d,
+  .reveal-3d-fade-up,
+  [data-reveal],
+  .reveal-3d-stagger > *,
+  .kinetic-3d-track,
+  .orbital-satellite,
+  .service-strip-box,
+  .about-slate-tall-card,
+  .hero-bg-img img {
+    transform: none !important;
+    transition: opacity 0.3s ease !important;
+    opacity: 1 !important;
+  }
+}

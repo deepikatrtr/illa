@@ -1,0 +1,268 @@
+/* ==========================================================================
+   ILAA INDIA — EDITORIAL INTERLOCKING PUZZLE MOSAIC GALLERY
+   ========================================================================== */
+
+:root {
+  --gallery-bg: #FFFFFF;
+  --gallery-text: #111111;
+  --gallery-muted: #71717A;
+  --gallery-accent: #111111;
+  --gallery-puzzle-gap: 16px;
+}
+
+.gallery-main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 6rem;
+}
+
+/* ==========================================================================
+   1. FILTER TABS (Minimalist Centered Navigation)
+   ========================================================================== */
+.gallery-filter-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.8rem;
+  margin-bottom: 3.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-filter-btn {
+  background: none;
+  border: none;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #9CA3AF;
+  cursor: pointer;
+  padding: 0.4rem 0.2rem;
+  position: relative;
+  transition: all 0.25s ease;
+  text-transform: capitalize;
+}
+
+.gallery-filter-btn:hover {
+  color: #111111;
+}
+
+.gallery-filter-btn.active {
+  color: #111111;
+  font-weight: 600;
+}
+
+.gallery-filter-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #111111;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   2. INTERLOCKING 3-COLUMN PUZZLE MOSAIC GRID (Flush Equal-Height Columns)
+   ========================================================================== */
+.gallery-puzzle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr 1fr;
+  gap: var(--gallery-puzzle-gap);
+  align-items: stretch;
+  width: 100%;
+}
+
+.gallery-puzzle-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gallery-puzzle-gap);
+}
+
+/* Individual Image Card in Puzzle */
+.gallery-puzzle-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #F3F4F6;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, opacity 0.35s ease;
+}
+
+.gallery-puzzle-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-puzzle-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Hover Overlay */
+.gallery-puzzle-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.4rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-puzzle-card:hover .gallery-puzzle-overlay {
+  opacity: 1;
+}
+
+.gallery-puzzle-caption {
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transform: translateY(6px);
+  transition: transform 0.3s ease;
+}
+
+.gallery-puzzle-card:hover .gallery-puzzle-caption {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   EXACT PUZZLE PIECE HEIGHTS (Matching Reference Dimensions)
+   ========================================================================== */
+
+/* COLUMN 1 PIECES */
+.puzzle-col1-top {
+  height: 380px;
+}
+.puzzle-col1-mid {
+  height: 240px;
+}
+.puzzle-col1-bot {
+  height: 480px;
+}
+
+/* COLUMN 2 PIECES */
+.puzzle-col2-top {
+  height: 290px;
+}
+.puzzle-col2-mid {
+  height: 810px;
+}
+
+/* COLUMN 3 PIECES */
+.puzzle-col3-1 {
+  height: 250px;
+}
+.puzzle-col3-2 {
+  height: 250px;
+}
+.puzzle-col3-3 {
+  height: 360px;
+}
+.puzzle-col3-4 {
+  height: 208px;
+}
+
+/* Filter Hide State */
+.gallery-puzzle-card.filter-hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   3. RESPONSIVE BREAKPOINTS (ALL DEVICES)
+   ========================================================================== */
+@media (max-width: 960px) {
+  .gallery-main-container {
+    padding: 2.5rem 1.25rem 4.5rem;
+  }
+
+  .gallery-filter-nav {
+    gap: 1.25rem;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.65rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .gallery-filter-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .gallery-filter-btn {
+    white-space: nowrap;
+    font-size: 0.82rem;
+  }
+
+  .gallery-puzzle-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .puzzle-col1-top,
+  .puzzle-col1-mid,
+  .puzzle-col1-bot,
+  .puzzle-col2-top,
+  .puzzle-col2-mid,
+  .puzzle-col3-1,
+  .puzzle-col3-2,
+  .puzzle-col3-3,
+  .puzzle-col3-4 {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-puzzle-col:last-child {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-main-container {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .gallery-puzzle-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .gallery-puzzle-col:last-child {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .puzzle-col1-top,
+  .puzzle-col1-mid,
+  .puzzle-col1-bot,
+  .puzzle-col2-top,
+  .puzzle-col2-mid,
+  .puzzle-col3-1,
+  .puzzle-col3-2,
+  .puzzle-col3-3,
+  .puzzle-col3-4 {
+    height: 260px;
+    aspect-ratio: auto;
+  }
+  
+  .gallery-puzzle-overlay {
+    opacity: 1;
+    padding: 1rem;
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+  }
+  
+  .gallery-puzzle-caption {
+    transform: translateY(0);
+    font-size: 0.78rem;
+  }
+}
+

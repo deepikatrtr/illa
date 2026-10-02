@@ -1,0 +1,1184 @@
+/* ==========================================================================
+   ILAA INDIA - ABOUT US EDITORIAL STYLESHEET
+   1:1 Match to Studio Sunsette / Viera Aesthetics Editorial Reference
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Bellefair&family=Cinzel:wght@300;400;500;600&family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --about-bg-canvas: #FAF8F5;
+  --about-bg-white: #FFFFFF;
+  --about-bg-card: #FFFFFF;
+  --about-text-dark: #121212;
+  --about-text-muted: #52525B;
+  --about-text-subtle: #71717A;
+  --about-color-accent: #2D5A34;
+  --about-border-subtle: rgba(0, 0, 0, 0.08);
+  --about-font-display: 'Italiana', 'Bellefair', 'Cormorant Garamond', Georgia, serif;
+  --about-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.about-page-body {
+  background-color: var(--about-bg-canvas);
+  color: var(--about-text-dark);
+  font-family: var(--about-font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Container */
+.about-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.about-container-wide {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Atmospheric Face / Sanctuary Cinematic with Dual Buttons)
+   ========================================================================== */
+.about-viera-hero {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1a1e1b;
+  overflow: hidden;
+}
+
+.about-viera-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.about-viera-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.72) contrast(1.05);
+}
+
+.about-viera-hero-content {
+  position: relative;
+  z-index: 3;
+  margin: auto auto auto clamp(1.5rem, 6vw, 6rem);
+  text-align: left;
+  max-width: 860px;
+  padding: 6rem 1.5rem 4rem 1.5rem;
+}
+
+.about-viera-hero-title {
+  font-family: var(--about-font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+.about-viera-hero-subtitle {
+  font-family: var(--about-font-sans);
+  font-size: clamp(0.78rem, 1vw, 0.88rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2.2rem;
+}
+
+.about-viera-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-viera-white {
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: var(--about-font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn-viera-white:hover {
+  background-color: #EFEFEA;
+  transform: translateY(-2px);
+}
+
+.btn-viera-translucent {
+  background-color: rgba(30, 30, 30, 0.65);
+  color: #FFFFFF;
+  font-family: var(--about-font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.btn-viera-translucent:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   2. EXACT UI REFERENCE DESIGN: EDITORIAL SLATE SECTION (1:1 MATCH)
+   ========================================================================== */
+.about-slate-editorial-section {
+  position: relative;
+  background: linear-gradient(145deg, #4a5360 0%, #363d47 48%, #252a32 100%);
+  color: #FFFFFF;
+  padding: 5rem 0 5.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-slate-container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* -------------------------------------------------------------
+   Top Row: Left (Intro + 1:1 Square Photo) & Right (2 Columns + Big Title)
+   ------------------------------------------------------------- */
+.about-slate-top-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 4.5rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+/* Left Column */
+.about-slate-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-slate-intro-text {
+  font-family: var(--about-font-sans);
+  font-size: 0.8125rem; /* ~13px */
+  line-height: 1.58;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.01em;
+  font-weight: 300;
+}
+
+.about-slate-bullet {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  margin-right: 2px;
+}
+
+.about-slate-portrait-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  background-color: #2b323d;
+}
+
+.about-slate-portrait-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.about-slate-portrait-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Right Column */
+.about-slate-right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.about-slate-mega-title-wrap {
+  margin-bottom: 2rem;
+}
+
+.about-slate-mega-title {
+  font-family: 'Italiana', 'Cinzel', 'Tenor Sans', 'Cormorant Garamond', serif;
+  font-size: clamp(4.2rem, 7.8vw, 7.6rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  line-height: 0.92;
+  color: #FFFFFF;
+  margin: 0;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.about-slate-dual-text-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: auto;
+}
+
+.about-slate-col-p {
+  font-family: var(--about-font-sans);
+  font-size: 0.8125rem; /* ~13px */
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  font-weight: 300;
+}
+
+/* -------------------------------------------------------------
+   Middle Subtitle / Tag (Positioned above Card 2)
+   ------------------------------------------------------------- */
+.about-slate-mid-label {
+  font-family: var(--about-font-sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+  margin-left: calc(310px + 4.5rem);
+}
+
+/* -------------------------------------------------------------
+   Bottom Section: Left Vertical Rotated Text + 4 Cards
+   ------------------------------------------------------------- */
+.about-slate-bottom-section {
+  position: relative;
+}
+
+.about-slate-gallery-row {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Left Vertical Label with Line */
+.about-slate-vertical-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding-bottom: 0.75rem;
+}
+
+.about-slate-vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--about-font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.about-slate-vertical-cta:hover .about-slate-vertical-text {
+  color: #FFFFFF;
+}
+
+.about-slate-vert-line {
+  width: 1px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.35);
+  margin-top: 1rem;
+}
+
+/* 4 Tall Cards Horizontal Grid */
+.about-slate-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+}
+
+.about-slate-tall-card {
+  position: relative;
+  height: 480px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #272d37;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.about-slate-tall-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.about-slate-card-media {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.about-slate-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease, filter 0.5s ease;
+  filter: brightness(0.92);
+}
+
+.about-slate-tall-card:hover .about-slate-card-media img {
+  transform: scale(1.06);
+  filter: brightness(1);
+}
+
+.about-slate-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 1rem 1.15rem 1rem;
+  background: linear-gradient(to top, rgba(15, 18, 24, 0.92) 0%, rgba(15, 18, 24, 0.5) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.about-slate-card-tag {
+  font-family: var(--about-font-sans);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.25rem;
+}
+
+.about-slate-card-title {
+  font-family: var(--about-font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.about-slate-card-meta {
+  font-family: var(--about-font-sans);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .about-slate-top-grid {
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
+  }
+  .about-slate-mid-label {
+    margin-left: calc(280px + 2.5rem);
+  }
+  .about-slate-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-slate-tall-card {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-slate-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-slate-portrait-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .about-slate-dual-text-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .about-slate-mid-label {
+    margin-left: 0;
+  }
+  .about-slate-gallery-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .about-slate-vertical-cta {
+    display: none;
+  }
+  .about-slate-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-slate-tall-card {
+    height: 340px;
+  }
+  .about-slate-mega-title {
+    font-size: 3.8rem;
+  }
+}
+
+/* ==========================================================================
+   4. "MEET OUR PRACTITIONERS" / FOUNDER FEATURE (Image 2 Style)
+   ========================================================================== */
+.about-practitioner-feature-section {
+  padding: clamp(4.5rem, 7vw, 7.5rem) 0;
+  background-color: var(--about-bg-canvas);
+}
+
+.about-practitioner-grid {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.about-practitioner-portrait-box {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.09);
+  background-color: #EDE8E1;
+}
+
+.about-practitioner-portrait-box img {
+  width: 100%;
+  height: 100%;
+  max-height: 580px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-practitioner-info-col {
+  padding-left: 0.5rem;
+}
+
+.about-practitioner-title {
+  font-family: var(--about-font-display);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--about-text-dark);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.about-practitioner-role {
+  font-family: var(--about-font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--about-color-accent);
+  margin-bottom: 1.75rem;
+  display: block;
+}
+
+.about-practitioner-bio {
+  font-family: var(--about-font-sans);
+  font-size: 0.88rem;
+  line-height: 1.78;
+  color: var(--about-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.about-practitioner-metrics-row {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--about-border-subtle);
+  border-bottom: 1px solid var(--about-border-subtle);
+}
+
+.practitioner-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.practitioner-metric-val {
+  font-family: var(--about-font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--about-text-dark);
+  line-height: 1;
+}
+
+.practitioner-metric-lbl {
+  font-family: var(--about-font-sans);
+  font-size: 0.72rem;
+  color: var(--about-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.35rem;
+}
+
+/* ==========================================================================
+   5. "WORD ACROSS CHENNAI" / REVIEWS WITH FULL-HEIGHT RADIANT PORTRAIT (Image 2 & 3)
+   ========================================================================== */
+.about-reviews-feature-section {
+  padding: clamp(4.5rem, 7vw, 7.5rem) 0;
+  background-color: #FFFFFF;
+}
+
+.about-reviews-grid {
+  display: grid;
+  grid-template-columns: 52% 48%;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+}
+
+.about-reviews-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-reviews-header-wrap {
+  margin-bottom: 2.5rem;
+}
+
+.about-reviews-heading {
+  font-family: var(--about-font-display);
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--about-text-dark);
+  text-transform: uppercase;
+  margin: 0 0 0.6rem 0;
+}
+
+.about-reviews-subtext {
+  font-family: var(--about-font-sans);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--about-text-muted);
+  margin: 0;
+}
+
+.about-review-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.about-review-single-card {
+  background: linear-gradient(135deg, #232934 0%, #151921 100%);
+  border-radius: 14px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-review-single-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
+}
+
+.about-review-single-card:nth-child(2) {
+  margin-left: 1.5rem;
+}
+
+.about-review-stars {
+  color: #E5C378;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.about-review-quote {
+  font-family: var(--about-font-sans);
+  font-size: 0.88rem;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 0.95rem 0;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.about-review-author-tag {
+  font-family: var(--about-font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.04em;
+}
+
+.about-reviews-portrait-box {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.1);
+  background-color: #E8E2D8;
+}
+
+.about-reviews-portrait-box img {
+  width: 100%;
+  height: 100%;
+  max-height: 640px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   6. EXACT UI REFERENCE DESIGN: FASHION GALLERY SECTION (1:1 MATCH)
+   ========================================================================== */
+.about-fashion-gallery-section {
+  padding: clamp(4.5rem, 7vw, 7rem) 0 clamp(4rem, 6vw, 6rem) 0;
+  background-color: #f7f8fa;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.about-fashion-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.about-fashion-card-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-fashion-photo-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #e5e8ec;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 0.85rem;
+}
+
+.about-fashion-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.about-fashion-card-item:hover .about-fashion-photo-box img {
+  transform: scale(1.04);
+}
+
+/* Card 1 Dark Quote Overlay Box */
+.about-fashion-quote-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(38, 48, 62, 0.82);
+  backdrop-filter: blur(2px);
+  padding: 1.75rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #FFFFFF;
+}
+
+.about-fashion-quote-p {
+  font-family: var(--about-font-sans);
+  font-size: 0.8125rem; /* ~13px */
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  font-weight: 300;
+}
+
+.about-fashion-card-caption {
+  font-family: var(--about-font-sans);
+  font-size: 0.78rem;
+  color: #4a5568;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Bottom Giant Display Title */
+.about-fashion-mega-title-wrap {
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.about-fashion-mega-title {
+  font-family: 'Italiana', 'Cinzel', 'Tenor Sans', 'Cormorant Garamond', serif;
+  font-size: clamp(3.6rem, 7.8vw, 7.5rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 0.95;
+  color: #1a202c;
+  margin: 0;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-fashion-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-fashion-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .about-fashion-mega-title {
+    font-size: 3.2rem;
+  }
+}
+
+/* ==========================================================================
+   7. "STANDARDS OF SANCTUARY" / OVERLAPPING FEATURE (Image 4 Style)
+   ========================================================================== */
+.about-standards-overlap-section {
+  padding: clamp(4.5rem, 7vw, 7.5rem) 0;
+  background-color: #FFFFFF;
+}
+
+.about-standards-grid {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.about-overlap-photos-wrap {
+  position: relative;
+  height: 520px;
+}
+
+.about-overlap-img-main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 78%;
+  height: 82%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+}
+
+.about-overlap-img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-overlap-img-sub {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  height: 52%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+  border: 4px solid #FFFFFF;
+}
+
+.about-overlap-img-sub img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-standards-info-col {
+  padding-left: 0.5rem;
+}
+
+.about-standards-heading {
+  font-family: var(--about-font-display);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--about-text-dark);
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.about-standards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 1.8rem 0 2.2rem 0;
+}
+
+.about-standard-item {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  border-left: 2px solid var(--about-color-accent);
+}
+
+.about-standard-name {
+  font-family: var(--about-font-sans);
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--about-text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.about-standard-desc {
+  font-family: var(--about-font-sans);
+  font-size: 0.84rem;
+  color: var(--about-text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   8. FULL-WIDTH HIGH-IMPACT BANNER (Image 4 Style)
+   ========================================================================== */
+.about-cinematic-banner {
+  position: relative;
+  width: 100%;
+  height: clamp(340px, 48vh, 440px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.about-cinematic-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-cinematic-banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65) contrast(1.05);
+}
+
+.about-cinematic-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+}
+
+.about-cinematic-banner-title {
+  font-family: var(--about-font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   9. EDITORIAL FOOTER (Image 4 Bottom)
+   ========================================================================== */
+.about-viera-footer {
+  background-color: var(--about-bg-canvas);
+  padding: clamp(4rem, 6vw, 5.5rem) 0 2rem 0;
+  border-top: 1px solid var(--about-border-subtle);
+}
+
+.about-footer-grid {
+  display: grid;
+  grid-template-columns: 32% 22% 22% 24%;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-bottom: 3.5rem;
+}
+
+.about-footer-brand-title {
+  font-family: var(--about-font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: var(--about-text-dark);
+  text-transform: uppercase;
+  margin: 0 0 1.2rem 0;
+}
+
+.about-footer-insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  max-width: 240px;
+}
+
+.about-footer-thumb {
+  width: 100%;
+  height: 72px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #E0DDD7;
+}
+
+.about-footer-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-footer-thumb:hover img {
+  transform: scale(1.08);
+}
+
+.about-footer-col-title {
+  font-family: var(--about-font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--about-text-dark);
+  margin: 0 0 1.25rem 0;
+}
+
+.about-footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.about-footer-links-list a, .about-footer-address-text {
+  font-family: var(--about-font-sans);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--about-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about-footer-links-list a:hover {
+  color: var(--about-color-accent);
+}
+
+.about-footer-social-row {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.about-footer-social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #111111;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.about-footer-social-btn:hover {
+  background-color: var(--about-color-accent);
+}
+
+.about-footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--about-border-subtle);
+  font-size: 0.74rem;
+  color: var(--about-text-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about-footer-bottom-bar a {
+  color: var(--about-text-subtle);
+  text-decoration: none;
+  margin-left: 1.2rem;
+}
+
+.about-footer-bottom-bar a:hover {
+  color: var(--about-text-dark);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (ALL DEVICES)
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .about-slate-container {
+    padding: 0 1.5rem;
+  }
+  .about-slate-top-grid {
+    grid-template-columns: 260px 1fr;
+    gap: 2.5rem;
+  }
+  .about-slate-mid-label {
+    margin-left: calc(260px + 2.5rem);
+  }
+  .about-slate-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .about-slate-tall-card {
+    height: 420px;
+  }
+  .about-fashion-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .about-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-slate-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-slate-portrait-card {
+    max-width: 280px;
+    margin: 0;
+  }
+  .about-slate-mid-label {
+    margin-left: 0;
+  }
+  .about-slate-dual-text-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .about-slate-gallery-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .about-slate-vertical-cta {
+    display: none;
+  }
+  .about-practitioner-grid,
+  .about-reviews-grid,
+  .about-standards-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .about-review-single-card:nth-child(2) {
+    margin-left: 0;
+  }
+  .about-overlap-photos-wrap {
+    height: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-viera-hero {
+    min-height: 80vh;
+  }
+  .about-viera-hero-content {
+    margin: auto 1rem auto 1rem;
+    padding: 4.5rem 0 2rem 0;
+  }
+  .about-viera-hero-title {
+    font-size: 2.1rem;
+  }
+  .about-viera-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-viera-white, .btn-viera-translucent {
+    width: 100%;
+    text-align: center;
+  }
+  .about-slate-editorial-section {
+    padding: 3.5rem 0;
+  }
+  .about-slate-mega-title {
+    font-size: 3rem;
+  }
+  .about-slate-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-slate-tall-card {
+    height: 360px;
+  }
+  .about-fashion-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-fashion-mega-title {
+    font-size: 2.8rem;
+  }
+  .about-practitioner-metrics-row {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .practitioner-metric-item {
+    min-width: 40%;
+  }
+  .about-overlap-photos-wrap {
+    height: 300px;
+  }
+  .about-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
